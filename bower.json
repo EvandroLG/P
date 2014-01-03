@@ -1,0 +1,21 @@
+{
+  "name": "P",
+  "version": "1.0.0",
+  "homepage": "https://github.com/evandrolg/p",
+  "authors": [
+    "evandrolg"
+  ],
+  "description": "It's an agnostic, cross-browser and very lightweight library to help you to work with Promise in JavaScript.",
+  "main": "src/p.min.js",
+  "keywords": [
+    "js",
+    "promise",
+    "callback",
+    "library",
+    "functional"
+  ],
+  "ignore": [
+    "**/.*"
+  ],
+  "license": "MIT"
+}
