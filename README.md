@@ -13,7 +13,7 @@ P is compatible with the following browsers/versions:
 ## Methods
 * P.init().<code>resolve(params)</code>
 * P.init().<code>reject(params)</code>
-* P.init().<code>reject(callback)</code>
+* P.init().<code>then(callback)</code>
 
 **Example**
 ```js
@@ -28,7 +28,6 @@ var ajax = function(url) {
     	}
 
     	p.resolve();
-        
     }, false);
 
     httpRequest.open('GET', url, true);
