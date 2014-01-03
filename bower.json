@@ -1,7 +1,7 @@
 {
   "name": "P",
   "version": "1.0.0",
-  "homepage": "https://github.com/evandrolg/p",
+  "homepage": "https://github.com/EvandroLG/P",
   "authors": [
     "evandrolg"
   ],
@@ -14,8 +14,12 @@
     "library",
     "functional"
   ],
+  "license": "MIT",
   "ignore": [
-    "**/.*"
-  ],
-  "license": "MIT"
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }
