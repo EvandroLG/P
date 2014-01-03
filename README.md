@@ -17,31 +17,31 @@ P is compatible with the following browsers/versions:
 
 **Example**
 ```js
-	var ajax = function(url) {
-        var httpRequest = new XMLHttpRequest();
-        var p = P.init();
+var ajax = function(url) {
+    var httpRequest = new XMLHttpRequest();
+    var p = P.init();
 
-        httpRequest.addEventListener('load', function() {
-        	if (httpRequest.status === 400) {
-        		p.reject();
-        		return;
-        	}
+    httpRequest.addEventListener('load', function() {
+    	if (httpRequest.status === 400) {
+    		p.reject();
+    		return;
+    	}
 
-        	p.resolve();
-            
-        }, false);
+    	p.resolve();
+        
+    }, false);
 
-        httpRequest.open('GET', url, true);
-        httpRequest.send();
-    };
+    httpRequest.open('GET', url, true);
+    httpRequest.send();
+};
 
-	ajax("ajax.html").then(
-		function() {
-			console.log('success!!!');
-		},
+ajax("ajax.html").then(
+	function() {
+		console.log('success!!!');
+	},
 
-		function() {
-			console.log('error!');
-		}
-	);
+	function() {
+		console.log('error!');
+	}
+);
 ```
