@@ -17,30 +17,19 @@ P is compatible with the following browsers/versions:
 
 **Example**
 ```js
-var ajax = function(url) {
-    var httpRequest = new XMLHttpRequest();
-    var p = P.init();
+var context = {name: 'Evandro', year: 27};
+var p = P.init(context);
 
-    httpRequest.addEventListener('load', function() {
-    	if (httpRequest.status === 400) {
-    		p.reject();
-    		return;
-    	}
+window.load = function(delay) {
+  setTimeout(function(){
+    p.resolve();
+  }, delay);
 
-    	p.resolve();
-    }, false);
-
-    httpRequest.open('GET', url, true);
-    httpRequest.send();
+  return p;
 };
 
-ajax("ajax.html").then(
-	function() {
-		console.log('success!!!');
-	},
-
-	function() {
-		console.log('error!');
-	}
-);
+window.load(200).then(function() {
+  console.log('name = ', this.name);
+  console.log('year = ', this.year);
+});
 ```
